@@ -1,0 +1,383 @@
+<!--<div *ngFor="let person of persons">
+  <span>{{ person.id }}-{{person.firstName}} - {{person.lastName}} - {{person.age}} -{{person.cin}}</span>
+</div>-->
+
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-primary" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          Basic dropdown<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+    <!-- Search form -->
+    <form class="form-inline waves-light" mdbWavesEffect>
+      <div class="md-form my-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      </div>
+    </form>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+<!--
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>-->
+
+
+<div class="container">
+<!--Section: Products v.2-->
+<section class="text-center pb-3 my-5">
+  <!--Section heading-->
+  <h2 class="h1 font-weight-bold text-center h1 py-5">Listes des clients</h2>
+  <!--Section description-->
+  <p class="grey-text pb-5">Voilà la liste des clients .</p>
+  <!--Grid row-->
+  <div *ngFor="let col of collection">
+  <div class="row" >
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12 mb-3">
+      <!--Card-->
+      <mdb-card cascade="true" wider="true" class="card-ecommerce">
+        <!--Card image-->
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src= "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img (55).jpg"
+                        alt="sample photo"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+        <!--Card content-->
+        <mdb-card-body cascade="true" class="text-center no-padding">
+          <!--Category & Title-->
+          <a href="" class="text-muted">
+            <h5>{{ col.firstName }} -- {{ col.lastName }}</h5>
+          </a>
+          <mdb-card-title>
+            <h4 class="card-title">
+              <strong>
+                <a href="">{{ col.id }}</a>
+              </strong>
+            </h4>
+          </mdb-card-title>
+          <!--Description-->
+          <mdb-card-text>{{ col.description }}</mdb-card-text>
+          <!--Card footer-->
+          <mdb-card-footer>
+            <span class="float-left font-weight-bold">
+              <strong>{{ col.mail }}</strong>
+            </span>
+            <span class="float-right">
+              <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look">
+                <mdb-icon far icon="eye" class="grey-text ml-3"></mdb-icon>
+              </a>
+             <!-- <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                <mdb-icon fas icon="heart" class="grey-text ml-3"></mdb-icon>
+              </a>-->
+            </span>
+          </mdb-card-footer>
+        </mdb-card-body>
+        <!--Card content-->
+      </mdb-card>
+      <!--Card-->
+    </div>
+    <!--Grid column-->
+
+
+
+
+
+
+
+
+
+    <!--Grid column-->
+<!--    <div class="col-lg-4 col-md-6 mb-2">
+      &lt;!&ndash;Card&ndash;&gt;
+      <mdb-card cascade="true" wider="true" class="card-ecommerce">
+        &lt;!&ndash;Card image&ndash;&gt;
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(49).jpg"
+                        alt="sample photo"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight">lklkggggggggggggggggg</div>
+          </a>
+        </div>
+        &lt;!&ndash;Card image&ndash;&gt;
+        &lt;!&ndash;Card content&ndash;&gt;
+        <mdb-card-body cascade="true" class="text-center no-padding">
+          &lt;!&ndash;Category & Title&ndash;&gt;
+          <a href="" class="text-muted">
+            <h5>{{ col.firstName }} &#45;&#45; {{ col.lastName }}</h5>
+          </a>
+          <mdb-card-title>
+            <h4 class="card-title">
+              <strong>
+                <a href="">{{ col.id }}</a>
+              </strong>
+            </h4>
+          </mdb-card-title>
+          &lt;!&ndash;Description&ndash;&gt;
+          <mdb-card-text>{{ col.description }}</mdb-card-text>
+          &lt;!&ndash;Card footer&ndash;&gt;
+          <mdb-card-footer>
+            <span class="float-left font-weight-bold">
+              <strong>{{ col.mail }}</strong>
+            </span>
+            <span class="float-right">
+               <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look">
+                <mdb-icon far icon="eye" class="grey-text ml-3"></mdb-icon>
+              </a>
+             &lt;!&ndash; <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                <mdb-icon fas icon="heart" class="grey-text ml-3"></mdb-icon>
+              </a>&ndash;&gt;
+            </span>
+          </mdb-card-footer>
+        </mdb-card-body>
+        &lt;!&ndash;Card content&ndash;&gt;
+      </mdb-card>
+      &lt;!&ndash;Card&ndash;&gt;
+    </div>-->
+    <!--Grid column-->
+    <!--Grid column-->
+  <!--  <div class="col-lg-4 col-md-6 mb-3">
+      &lt;!&ndash;Card&ndash;&gt;
+      <mdb-card cascade="true" wider="true" class="card-ecommerce">
+        &lt;!&ndash;Card image&ndash;&gt;
+        <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+          <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img (56).jpg"
+                        class="img-fluid" alt="sample photo"></mdb-card-img>
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        &lt;!&ndash;Card image&ndash;&gt;
+        &lt;!&ndash;Card content&ndash;&gt;
+        <mdb-card-body cascade="true" class="text-center no-padding">
+          &lt;!&ndash;Category & Title&ndash;&gt;
+          <a href="" class="text-muted">
+            <h5>{{ col.firstName }} &#45;&#45; {{ col.lastName }}</h5>
+          </a>
+          <mdb-card-title>
+            <h4>
+              <strong>
+                <a href="">{{ col.id }}</a>
+              </strong>
+            </h4>
+          </mdb-card-title>
+          &lt;!&ndash;Description&ndash;&gt;
+          <mdb-card-text>{{ col.description }}</mdb-card-text>
+          &lt;!&ndash;Card footer&ndash;&gt;
+          <mdb-card-footer>
+            <span class="float-left font-weight-bold">
+              <strong>{{ col.mail }}</strong>
+            </span>
+            <span class="float-right">
+              <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look">
+                <mdb-icon far icon="eye" class="grey-text ml-3"></mdb-icon>
+              </a>
+             &lt;!&ndash; <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                <mdb-icon fas icon="heart" class="grey-text ml-3"></mdb-icon>
+              </a>&ndash;&gt;
+            </span>
+          </mdb-card-footer>
+        </mdb-card-body>
+        &lt;!&ndash;Card content&ndash;&gt;
+      </mdb-card>
+      &lt;!&ndash;Card&ndash;&gt;
+    </div>-->
+    <!--Grid column-->
+    <!-- Section: Blog v.3 -->
+    <section class="my-5">
+
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold text-center my-5">Recent posts</h2>
+      <!-- Section description -->
+      <p class="text-center dark-grey-text w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-lg-5 col-xl-4">
+
+          <!-- Featured image -->
+          <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" alt="Sample image">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-7 col-xl-8">
+
+          <!-- Post title -->
+          <h3 class="font-weight-bold mb-3"><strong>Title of the news</strong></h3>
+          <!-- Excerpt -->
+          <p class="dark-grey-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+            quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
+            et aut officiis debitis cum soluta nobis est eligendi placeat facere aut rerum.</p>
+          <!-- Post data -->
+          <p>by <a class="font-weight-bold">Jessica Clark</a>, 19/04/2018</p>
+          <!-- Read more button -->
+          <a mdbBtn color="primary" mdbWavesEffect>Read more</a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+      <hr class="my-5">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-lg-5 col-xl-4">
+
+          <!-- Featured image -->
+          <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/31.jpg" alt="Sample image">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-7 col-xl-8">
+
+          <!-- Post title -->
+          <h3 class="font-weight-bold mb-3"><strong>Title of the news</strong></h3>
+          <!-- Excerpt -->
+          <p class="dark-grey-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident et accusamus iusto odio dignissimos et dolorum fuga.</p>
+          <!-- Post data -->
+          <p>by <a class="font-weight-bold">Jessica Clark</a>, 16/04/2018</p>
+          <!-- Read more button -->
+          <a mdbBtn color="primary" mdbWavesEffect>Read more</a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+      <hr class="my-5">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-lg-5 col-xl-4">
+
+          <!-- Featured image -->
+          <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+            <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/52.jpg" alt="Sample image">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-7 col-xl-8">
+
+          <!-- Post title -->
+          <h3 class="font-weight-bold mb-3"><strong>Title of the news</strong></h3>
+          <!-- Excerpt -->
+          <p class="dark-grey-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+            quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+            qui dolorem ipsum quia dolor sit amet, psam voluptatem quia consectetur.</p>
+          <!-- Post data -->
+          <p>by <a class="font-weight-bold">Jessica Clark</a>, 12/04/2018</p>
+          <!-- Read more button -->
+          <a mdbBtn color="primary" mdbWavesEffect>Read more</a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </section>
+    <!-- Section: Blog v.3 -->
+  </div>
+
+  </div>
+  <!--Grid row-->
+</section>
+<!--Section: Products v.2-->
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/education/angular/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+
+</footer>
+<!-- Footer -->
